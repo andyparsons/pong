@@ -1,0 +1,8 @@
+Django==1.6.2
+Mako==0.9.1
+MarkupSafe==0.19
+PyHAML==1.0.1
+South==0.8.4
+django-mako-plus==2.0.13
+six==1.5.2
+wsgiref==0.1.2
