@@ -8,6 +8,7 @@ South==0.8.4
 django-extensions==1.3.3
 django-mako-plus==2.0.13
 django-model-utils==2.0.2
+django-zurb-foundation==5.1.1
 ecdsa==0.10
 ipython==1.2.1
 paramiko==1.12.2
