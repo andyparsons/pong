@@ -1,5 +1,5 @@
-#python specific
-*.pyc
+#python-specific
+*.py[cod]
 local.py
 
 ## generic files to ignore
