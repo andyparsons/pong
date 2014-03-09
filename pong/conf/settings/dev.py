@@ -4,6 +4,8 @@ from common import *
 """Production settings and globals."""
 from common import *
 
+DEBUG = True
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
