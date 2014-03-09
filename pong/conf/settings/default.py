@@ -35,18 +35,16 @@ DEFAULT_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
-    'south',
 )
 
 THIRD_PARTY_APPS = (
     'south',
     'django_extensions',
     'rest_framework',
-
 )
 LOCAL_APPS = (
-    'main',
+    'account',
+    'help',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
