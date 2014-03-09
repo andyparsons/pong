@@ -23,6 +23,8 @@ urlpatterns = patterns('',
 	# admin
     url(r'^admin/', include(admin.site.urls)),
 
+    url(r'^foundation/', include('foundation.urls')),
+
     # Wire up our API using automatic URL routing.
 	# Additionally, we include login URLs for the browseable API.
     #url(r'^', include(router.urls)),

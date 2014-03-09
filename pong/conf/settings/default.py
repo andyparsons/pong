@@ -41,7 +41,9 @@ THIRD_PARTY_APPS = (
     'south',
     'django_extensions',
     'rest_framework',
+    'foundation'
 )
+
 LOCAL_APPS = (
     'account',
     'help',
