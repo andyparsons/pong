@@ -9,10 +9,16 @@ class Ask(TimeStampedModel):
     body = models.CharField(max_length=1000)
     is_closed = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.body[:10]
+
 
 class Answer(TimeStampedModel):
     db_table = 'answer'
     user = models.ForeignKey(User)
     body = models.CharField(max_length=1000)
     ask = models.ForeignKey(Ask)
+
+    def __str__(self):
+        return self.body[:10]
 
