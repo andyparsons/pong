@@ -1,7 +1,9 @@
 from django.conf.urls import patterns, include, url, include
 from django.contrib.auth.models import User, Group
+from django.views.generic import TemplateView
 from rest_framework import viewsets, routers
 
+import help.views 
 
 from django.contrib import admin
 admin.autodiscover()
@@ -24,6 +26,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^foundation/', include('foundation.urls')),
+    url(r'^$', TemplateView.as_view(template_name='home.html')),
+    url(r'asks/', help.views.ListContactView.as_view(),
+		name='contacts-list',),
 
     # Wire up our API using automatic URL routing.
 	# Additionally, we include login URLs for the browseable API.
