@@ -65,6 +65,10 @@ ROOT_URLCONF = 'pong.urls'
 
 WSGI_APPLICATION = 'pong.wsgi.application'
 
+TEMPLATE_LOADERS = (
+    'djaml.loaders.DjamlFilesystemLoader',
+    'djaml.loaders.DjamlAppDirectoriesLoader',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
