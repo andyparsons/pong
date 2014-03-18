@@ -72,10 +72,17 @@ TEMPLATE_LOADERS = (
     'djaml.loaders.DjamlAppDirectoriesLoader',
 )
 
-BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'bower_components')
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates'),
+)
+
+BOWER_COMPONENTS_ROOT = PROJECT_ROOT
 
 BOWER_INSTALLED_APPS = (
     'jquery',
+    'underscore',
+    'bower-foundation',
+    'font-awesome',
 )
 
 # Database
@@ -104,6 +111,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_FINDERS = (
+    'djangobower.finders.BowerFinder',
+)
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+#STATICFILES_DIRS = (
+#    os.path.join(PROJECT_ROOT, 'static'),
+#)
 
 
 REST_FRAMEWORK = {
