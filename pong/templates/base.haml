@@ -1,0 +1,13 @@
+!!!
+{% load static %}
+
+%html
+    %head
+        %script type="text/javascript" src='{% static 'jquery/jquery.js' %}'
+        
+        %title
+            This is the title
+
+    %body
+        {% block content %}
+        {% endblock %}

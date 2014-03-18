@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "../.."),
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -35,13 +37,13 @@ DEFAULT_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangobower',
 )
 
 THIRD_PARTY_APPS = (
     'south',
     'django_extensions',
     'rest_framework',
-    'foundation'
 )
 
 LOCAL_APPS = (
@@ -68,6 +70,12 @@ WSGI_APPLICATION = 'pong.wsgi.application'
 TEMPLATE_LOADERS = (
     'djaml.loaders.DjamlFilesystemLoader',
     'djaml.loaders.DjamlAppDirectoriesLoader',
+)
+
+BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'bower_components')
+
+BOWER_INSTALLED_APPS = (
+    'jquery',
 )
 
 # Database
