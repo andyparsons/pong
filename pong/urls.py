@@ -24,9 +24,9 @@ router.register(r'groups', GroupViewSet)
 urlpatterns = patterns('',
 	# admin
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', TemplateView.as_view(template_name='home.html')),
+    url(r'^$', TemplateView.as_view(template_name='home.haml')),
     url(r'asks/', help.views.ListContactView.as_view(),
-		name='contacts-list',),
+		name='asks-list',),
 
     # Wire up our API using automatic URL routing.
 	# Additionally, we include login URLs for the browseable API.

@@ -1,13 +1,12 @@
 {% extends "base.haml" %}
 
-{% block content %}
+{% block body %}
 %h1 
   Asks
 
 %ul
   {% for ask in object_list %}
-    %li.ask
-      {{ ask.body }}
+    %li.ask {{ ask.body }}
   {% endfor %}
 
 {% endblock %}

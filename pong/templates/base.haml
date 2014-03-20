@@ -2,12 +2,18 @@
 {% load static %}
 
 %html
-    %head
-        %script type="text/javascript" src='{% static 'jquery/dist/jquery.js' %}'
-        
-        %title
-            This is the title
+  %head
+    %script{:type => 'text/javascript', :src => "{% static 'jquery/dist/jquery.js' %}"}
+    %link{:href => "{% static 'bower-foundation/css/foundation.css' %}", :rel => "stylesheet"}
 
-    %body
-        {% block content %}
-        {% endblock %}
+    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.js' %}"}
+    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.topbar.js' %}"}
+    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.dropdown.js' %}"}
+    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.section.js' %}"}
+        
+    %title
+      This is the title
+
+  %body
+    {% block body %}
+    {% endblock %}
