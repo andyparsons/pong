@@ -1,11 +1,7 @@
 """
+
 Django settings for pong project.
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -109,7 +105,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
 STATIC_URL = '/static/'
 STATICFILES_FINDERS = (
     'djangobower.finders.BowerFinder',
@@ -119,6 +114,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 #    os.path.join(PROJECT_ROOT, 'static'),
 #)
 
+AUTH_PROFILE_MODULE = "account.UserProfile"
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.
@@ -132,5 +128,3 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
-
-AUTH_PROFILE_MODULE = "account.UserProfile"
