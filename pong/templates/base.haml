@@ -3,13 +3,11 @@
 
 %html
   %head
-    %script{:type => 'text/javascript', :src => "{% static 'jquery/dist/jquery.js' %}"}
     %link{:href => "{% static 'bower-foundation/css/foundation.css' %}", :rel => "stylesheet"}
+    %link{:href => "{% static 'bower-foundation/css/normalize.css' %}", :rel => "stylesheet"}
 
-    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.js' %}"}
-    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.topbar.js' %}"}
-    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.dropdown.js' %}"}
-    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation/foundation.section.js' %}"}
+    %script{:type => 'text/javascript', :src => "{% static 'jquery/dist/jquery.js' %}"}
+    %script{:type => 'text/javascript', :src => "{% static 'bower-foundation/js/foundation.min.js' %}"}
         
     %title
       This is the title
@@ -17,3 +15,5 @@
   %body
     {% block body %}
     {% endblock %}
+    %script
+      $(document).foundation();

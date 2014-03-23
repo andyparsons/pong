@@ -1,12 +1,19 @@
 {% extends "base.haml" %}
 
 {% block body %}
-%h1 
-  Asks
 
-%ul
-  {% for ask in object_list %}
-    %li.ask {{ ask.body }}
-  {% endfor %}
+{% include "nav.haml" %}
+
+.row
+  .large-12.columns
+    %h3 Asks
+
+{% for ask in object_list %}
+.row
+  .large-8.columns
+    .panel
+      {{ ask.body }}
+{% endfor %}
+
 
 {% endblock %}
