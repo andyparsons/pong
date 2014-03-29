@@ -40,12 +40,13 @@ THIRD_PARTY_APPS = (
     'south',
     'django_extensions',
     'rest_framework',
-    'pipeline',
+    'django_assets',
 )
 
 LOCAL_APPS = (
     'account',
     'help',
+    'assets',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
