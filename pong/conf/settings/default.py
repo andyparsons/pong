@@ -40,6 +40,7 @@ THIRD_PARTY_APPS = (
     'south',
     'django_extensions',
     'rest_framework',
+    'pipeline',
 )
 
 LOCAL_APPS = (
@@ -113,6 +114,34 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 #STATICFILES_DIRS = (
 #    os.path.join(PROJECT_ROOT, 'static'),
 #)
+
+# Pipline for assets
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE_COMPILERS = (
+  'pipeline.compilers.sass.SASSCompiler',
+)
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
+PIPELINE_SASS_BINARY = '/usr/bin/sass'
+
+PIPELINE_CSS = {
+    'app': {
+        'source_filenames': (
+          'static/bower-foundation/css/*',
+        ),
+        'output_filename': 'css/app1.css',
+    },
+}
+
+PIPELINE_JS = {
+    'app': {
+        'source_filenames': (
+          'js/*.js',
+        ),
+        'output_filename': 'bower_components/js/app.js',
+    }
+}
 
 AUTH_PROFILE_MODULE = "account.UserProfile"
 
